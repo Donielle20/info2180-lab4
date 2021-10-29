@@ -76,14 +76,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         if ($superhero['name'] == $_POST['name'] or $superhero['alias'] == $_POST['name'])
         {
             $count = $count + 1;
-            echo "<h3>" . $superhero['name'] . "</h3>";
-            echo "<h4>" . "A.K.A. " . $superhero['alias'] . "</h3>";
+            echo "<h3>" . $superhero['alias'] . "</h3>";
+            echo "<h4>" . "A.K.A. " . $superhero['name'] . "</h3>";
             echo "<p>" . $superhero['biography'] . "</p>";
         }
     } 
     if ($count == 0 and $_POST['name'] != "")
     {
-        echo "SUPERHERO NOT FOUND";
+        echo '<h3 style="color:red;">' . "SUPERHERO NOT FOUND" . "</h3>";
     }  
 
     if ($_POST['name'] == "")

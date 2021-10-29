@@ -1,7 +1,54 @@
-h1{
-    color: blue;
+.title{
+    background-color: rgb(67, 114, 216);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
 }
 
-h2{
-    color: red;
+html{
+    background-color: lightgrey;
+}
+
+.struc{
+    position: relative;
+    left: 147px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+.controls{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+input{
+    width: 600px;
+    height: 33px;
+    border-radius: 5px;
+}
+
+button{
+    height: 38px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+}
+
+hr{
+    width: 700px;
+}
+
+.result1{
+    position: relative;
+    left: 147px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+.final{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    position: relative;
+    left: 147px;
 }
