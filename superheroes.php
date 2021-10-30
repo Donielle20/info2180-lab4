@@ -67,13 +67,10 @@ $superheroes = [
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    //echo "Your name is: <strong>" . $_POST['name'] . "</strong>";
-    // echo "<h3>" . $superheroes[0]['name'] . "</h3>";
-    // echo "<h3>" . $_POST['name'] . "</h3>";
     $count = 0;
     foreach ($superheroes as $superhero)
     {
-        if ($superhero['name'] == $_POST['name'] or $superhero['alias'] == $_POST['name'])
+        if ($superhero['name'] == strip_tags($_POST['name']) or $superhero['alias'] == strip_tags($_POST['name']))
         {
             $count = $count + 1;
             echo "<h3>" . $superhero['alias'] . "</h3>";
@@ -81,12 +78,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             echo "<p>" . $superhero['biography'] . "</p>";
         }
     } 
-    if ($count == 0 and $_POST['name'] != "")
+    if ($count == 0 and strip_tags($_POST['name']) != "")
     {
         echo '<h3 style="color:red;">' . "SUPERHERO NOT FOUND" . "</h3>";
     }  
 
-    if ($_POST['name'] == "")
+    if (strip_tags($_POST['name']) == "")
     {
         echo "<ul>";
         foreach ($superheroes as $superhero)
